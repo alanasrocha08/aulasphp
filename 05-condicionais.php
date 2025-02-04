@@ -10,6 +10,17 @@
     <hr>
 
     <h2>Simples</h2>
+    <h3><code>if</code></h3>
+<?php
+$numero = 5;
+
+if($numero > 1){
+    echo "<p>$numero é maior que 1</p>";
+}
+
+//Sintaxe omitindo as chaves
+if($numero > 1) echo "<p>$numero é maior que 1<p>";
+?>
 
     <h2>Compostas</h2>
 

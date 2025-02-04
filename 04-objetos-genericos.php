@@ -31,9 +31,23 @@ echo "<p><mark>{$usuario->nome}</mark><p;>"//interpolação
     <h2>Saída de dados</h2>
     <p>Nome: <?=$usuario-> nome?></p>
     <p>Idade: <?=$usuario-> idade?>anos</p>
-    <p>Telefone: <?=$usuario-> telefones[1]?></p>
+    <p>Telefone: <?=$usuario-> telefone[1]?></p>
 
     <hr>
+
+    <h2>Convertendo (fazendo um casting) um ojeto em um array associativo</h2>
+
+    <?php $arrayUsuario = (array) $usuario;?>
+
+        <h3>Analisando o array gerado a partir de um objeto</h3>
+        <pre><?=var_dump($arrayUsuario)?></pre>
+
+    <h2>Convertendo (fazendo um casting) array associativo em objeto</h2>
+
+    <?php
+    //Array associativo com duas chaves (nome e sobrenome)
+    $aluno = ["nome" => "Fulano", "sobrenome" => "D'Town"]; 
+    ?>
 
     
     

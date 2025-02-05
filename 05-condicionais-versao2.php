@@ -70,15 +70,16 @@ if ($qtdEmEstoque < $qtdCritica) {
     <?php
     $idade = 60;
     if ($idade <= 12) {
-        echo"<p>Criança</>";
+        $texto = "Criança";
     } elseif($idade <= 17){
-        echo "<p>Adolecente</p>";
+        $texto = "Adolecente";
     } elseif($idade <= 59){
-        echo "<p>Adulto</p>";
+        $texto =  "Adulto";
     } else {
-        echo "<p>Idoso</p>";
+        $texto =  "Idoso";
     }
     ?>
+    <p><?=$texto?></p>
 
 </body>
 </html>

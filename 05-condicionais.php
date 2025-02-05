@@ -5,18 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP - condicionais</title>
     <style>
-        .comprar{
-            color: red;
-        }
+        .comprar{color: red;}
 
         .urgente{
             color: red;
             background-color: yellow;
         }
 
-        .normal{
-            color: green;
-        }
+        .normal{color: green;}
 
     </style>
 </head>
@@ -61,6 +57,21 @@ else {
 }
 ?>
 
-    <h2>Encadeadas</h2>
+    <h2>Encadeadas usando <code>if/eslseif/else</code></h2>
+    <!-- Verificar a idade de uma pessoa e determinar se ela é criança, adolecente, adulta ou idosa. -->
+
+    <?php
+    $idade = 60;
+    if ($idade <= 12) {
+        echo"<p>Criança</>";
+    } elseif($idade <= 17){
+        echo "<p>Adolecente</p>";
+    } elseif($idade <= 59){
+        echo "<p>Adulto</p>";
+    } else {
+        echo "<p>Idoso</p>";
+    }
+    ?>
+
 </body>
 </html>

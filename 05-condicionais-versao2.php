@@ -20,19 +20,18 @@
     <h1>(VERSÃO 2)Estruturas condicionais</h1>
     <hr>
 
-    <h2>Simples</h2>
-    <h3 ><code>if</code></h3>
+    <h2>Simples usando <code>if</code></h2>
 <?php
 $numero = 5;
 
 if($numero > 1){
-    echo "<p>$numero é maior que 1</p>";
+?>
+    <p><?=$numero?> é maior que 1</p>
+<?php
 }
-
-//Sintaxe omitindo as chaves
-if($numero > 1) echo "<p>$numero é maior que 1<p>";
 ?>
 
+    <hr>
     <h2>Compostas</h2>
 <?php
 $produto = "Ultrabook Asus";
@@ -43,6 +42,7 @@ echo "<h3>$produto</h3>";
 echo "<h4>Quantidade em estoque: $qtdEmEstoque</h4>";
 
 if ($qtdEmEstoque < $qtdCritica) {
+
     echo "<p class='comprar'>É necessário comprar!</p>";
 
     

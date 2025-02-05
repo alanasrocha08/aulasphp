@@ -37,25 +37,32 @@ if($numero > 1){
 $produto = "Ultrabook Asus";
 $qtdEmEstoque = 0; //o que temos
 $qtdCritica = 5; //mínimo necessário
+?>
 
-echo "<h3>$produto</h3>";
-echo "<h4>Quantidade em estoque: $qtdEmEstoque</h4>";
+<h3><?=$produto?></h3>
+<h4>Quantidade em estoque: <?=$qtdEmEstoque?></h4>
 
+<?php
 if ($qtdEmEstoque < $qtdCritica) {
+?>
 
-    echo "<p class='comprar'>É necessário comprar!</p>";
+    <p class="comprar">É necessário comprar!</p>
 
     
-
-        //Condicional ANINHADA
-        if($qtdEmEstoque === 0){
-            echo "<p class='urgente'><strong>📢URGENTE📢</strong></p>";
-        }
-    }
-else {
-    echo "<p class='normal'>Estoque normal</p>";
+    <?php //Condicional ANINHADA 
+    if($qtdEmEstoque === 0):
+    ?>
+        <p class='urgente'><strong>📢URGENTE📢</strong></p>
+    <?php
+    endif;
+        
+}else {
+?>
+    <p class="normal">Estoque normal</p>
+<?php
 }
 ?>
+    <hr>
 
     <h2>Encadeadas usando <code>if/eslseif/else</code></h2>
     <!-- Verificar a idade de uma pessoa e determinar se ela é criança, adolecente, adulta ou idosa. -->

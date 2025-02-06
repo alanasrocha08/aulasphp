@@ -17,9 +17,13 @@ $media = 9.5;
 $faltas = 10;
 
 if ($media >= 7 && $faltas <= 10) {
-    echo "<p>Aprovado (a)</p>";
+?>
+    <p>Aprovado (a)</p>
+<?php
 } else {
-    echo "<p>Reprovado(a)</>";
+?>
+    <p>Reprovado(a)</p>
+<?php
 }
 ?>
 <hr>
@@ -33,9 +37,14 @@ $clienteVIP = true; //valor/tipo lógico/boolean
 $temCupom = false;
 
 if ($clienteVIP || $temCupom) {
-    echo "<p>Desconto aplicando!</p>";
+?>
+    <p>Desconto aplicando!</p>
+<?php
 } else {
-    echo "<p>Sem desconto</p>";
+?>
+  
+    <p>Sem desconto</p>
+<?php
 }
 ?>
 
@@ -48,9 +57,13 @@ if ($clienteVIP || $temCupom) {
 $usuarioLogado = false;
 
 if (!$usuarioLogado) {
-    echo "<a href =\"login.php\">Login</a>";
+?>  
+    <a href ="login.php">Login</a>
+<?php
 } else {
-    echo"<sapan>Bem-vindo(a) ao sistema!</span>";
+?>
+    <span>Bem-vindo(a) ao sistema!</span>
+<?php
 }
 ?>
 
@@ -68,11 +81,13 @@ $acompanhadoDosPais = true;
 $estarBebado = true;
 
 if (($idade >= 18 || $acompanhadoDosPais) && ! $estarBebado) {
-    echo "<p>entrada permitida</p>";
-    
+?>
+    <p>entrada permitida</p>
+<?php    
 } else {
-    echo"<p>entrada negada</p>";
-    
+?>
+    <p>entrada negada</p>
+<?php    
 }
 ?>
     

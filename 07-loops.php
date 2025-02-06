@@ -76,11 +76,44 @@ while ($i < 12) {
     <li>
     <?=$meses[$i]?>
     </li>
-    w<?php
+    <?php
     $i++;
 }
  
 ?>
 </ol>
+
+    <hr>
+
+    <h2>FOREACH (PARA CADA)</h2>
+    <p>Versão simplificada do loop for e bem mais fácil de usar com arrays e objetos.</p>
+
+    <h3>Acessando array indexado/numérico</h3>
+
+<?php
+$alunos = ["Denis", "Paulo","Heloisa"];
+
+foreach($alunos as $aluno) {
+?>
+    <p>Nome: <?=$aluno?></p>
+<?php
+}
+?> 
+
+<h3>Acessando array associativo</h3>
+<?php
+$clubes = [
+    "Corinthians" => "Timão",
+    "Palmeiras" => "Porco",
+    "São Paulo" => "Tricolor",
+    "Santos" => "Peixe"
+];
+
+foreach($clubes as $clube => $apelido)
+{?>
+    <p>O clube <?=$clube?> é conheciso como <?=$apelido?></p>
+<?php
+}
+?>
 </body>
 </html>

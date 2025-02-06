@@ -26,5 +26,17 @@ $valorFinal = $valorCompra - $valorCompra * $desconto
     ?>
     <p>Valor final da compra é: <?=$valorFinal?></p>
 
+    <p>Valor da compra (sem desconto): R$
+    <?=number_format($valorCompra, 2, ",", ".")?>
+</p>
+
+<p>Valor com desconto ficou em: R$
+    <?=number_format($valorFinal, 2, ",", ".")?>
+</p>
+
+<p>Foi dado um desconto de:
+    <?=$desconto * 100?>% (<?=$valorCompra - $valorFinal?>)
+</p>
+
 </body>
 </html>

@@ -21,7 +21,19 @@
         }
         ?>
         <h3>Chamada do precedimento</h3>
-         <?= exibirDadosDoAutor()?>
+         <?php
+         $valor = 500;
+         if($valor > 1000){
+            exibirDadosDoAutor();
+         }
+         ?>
+
+         <h3>Outras chamadas</h3>
+         <div><?=exibirDadosDoAutor()?></div>
+            <ul>
+                <li><?=exibirDadosDoAutor()?></li>
+                <li><b><?=exibirDadosDoAutor()?></b></li>
+            </ul>
         
         <hr>
     </div>

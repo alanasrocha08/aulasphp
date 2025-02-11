@@ -81,6 +81,33 @@ function exibirSaudacao($mensagem, $pessoa = "fulano(a)"){
 ?>
         <p>Mensagem 1: <?=exibirSaudacao("Bom dia","João Pedro ")?></p>
         <p>Mensagem 2: <?=exibirSaudacao("Boa tarde")?></p>
+
+        <hr>
+
+        <h2>Introdução de tipos de dados</h2>
+<?php
+/*Indicando que o parâmetro DEVE ser do tipo inteiro, e que o retorno da função DEVE ser do tipo string. */
+function verificarNegativo( int $valor): string{
+    if($valor < 0){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+/*Tipos comuns para uso com introduçao string -> texto/cacteres em geral
+int -> números inteiros 
+float -> números com casas decimais
+array -> veor/matriz 
+object -> objeto */
+?>
+    <p>Número 10: <?=verificarNegativo(10)?></p>
+    <p>Número -10: 
+        <span class="badge text-bg-danger"><?=verificarNegativo(-10)?></span></p>
+
+        <!-- O código abaixo (tire os cmentários se quiser testar) gera um erro relacionado a induçao de tipos (foi dado um string e era esperado um número inteiro) -->
+        <!-- <p>Teste de valor/parâmetro errado: <?=verificarNegativo("Paulo Henrique")?></p> -->
+
     </div>
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

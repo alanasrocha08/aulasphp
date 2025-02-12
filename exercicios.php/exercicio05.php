@@ -16,7 +16,7 @@
     <?php
     $nota1 = 8;
     $nota2 = 7;
-    $nota3 = 9;
+    $nota3 = 5;
 
     function calcularMediaNotas ($nota1, $nota2, $nota3){
         $media = ($nota1 + $nota2+ $nota3) /3;
@@ -41,6 +41,11 @@
     ?>
 
     <p>Média das notas do aluno foi: <?= $mediaFinal ?></p>
+    <p>Situação:
+        <b class="badge text-bg-<?=$classeCor >= 7 ? 'success' : 'danger'?>">
+            <?=$situacao?>
+        </b>
+    </p>
     
 
 </div>

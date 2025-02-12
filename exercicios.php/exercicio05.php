@@ -14,17 +14,33 @@
     <p></p>
 
     <?php
-    $aluno = "Kelly"; 
-   
-    $calcularMediaDasNotas = function (float $nota1, float $nota2, float $nota3){
-        $mediaDasNotas = ($nota1 + $nota2+ $nota3) /3;
+    $nota1 = 8;
+    $nota2 = 7;
+    $nota3 = 9;
 
-        return $mediaDasNotas;
+    function calcularMediaNotas ($nota1, $nota2, $nota3){
+        $media = ($nota1 + $nota2+ $nota3) /3;
+
+        return $media;
     };
+
+    function verificarSituacao($media) {
+        if ($media >= 7) {
+            return "Aprovado";
+        } else {
+            return "Reprovado";
+        }
+    }
+
+    $mediaFinal = calcularMediaNotas($nota1, $nota2, $nota3);
+
+    $situacao = verificarSituacao($mediaFinal);
+
+    $classeCor = ($situacao == "Aprovado") ? "text-primary" : "text-danger";
   
     ?>
 
-    <p>Média das notas do aluno <?= $aluno ?> foi: <?= $calcularMediaDasNotas ?></p>
+    <p>Média das notas do aluno foi: <?= $mediaFinal ?></p>
     
 
 </div>

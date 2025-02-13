@@ -57,8 +57,27 @@ $arrayBandas = ["Rush", "Slayer", "Dio"];
 $textoBandas = implode(" - ", $arrayBandas);
 ?>
 
-<pre><?=var_dump($arrayBandas)?></pre>
-<pre><?=var_dump($textoBandas)?></pre>
+    <pre><?=var_dump($arrayBandas)?></pre>
+    <pre><?=var_dump($textoBandas)?></pre>
+    <hr>
+
+    <h3><code>extract()</code></h3>
+    <p>Extrai</p>
+    <?php
+    $aluno = [
+        "id" => 1,
+        "nome"=> "Chapolin Colorado",
+        "idade" => 25
+    ];
+     
+    extract($aluno);
+    ?>
+            <ul>
+                <li>ID: <?=$id?></li>
+                <li>Nome: <?=$nome?></li>
+                <li>Idade: <?=$idade?></li>
+            </ul>
+
 
 
     </div>

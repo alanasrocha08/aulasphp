@@ -3,6 +3,7 @@ define("ESCOLA", "Senac");
 $curso = "Téc. Informática para internet";
 $tecnologias = ["HTML", "CSS", "JS"];
 
-function verificar (int $valorDaIdade):string{
-    return $valorDaIdDE >= 18 ? "maior" : "menor";
+function verificarIdade (int $valorDaIdade):string{
+    return $valorDaIdade >= 18 ? "maior" : "menor";
 }
+?>

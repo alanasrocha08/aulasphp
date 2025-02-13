@@ -35,6 +35,32 @@ $fraseBrunitinha = str_replace(
 ?>
         <p><?=$fraseFeia?></p>
         <p><?=$fraseBrunitinha?></p>
+
+        <hr>
+
+        <h3><code>explode()</code></h3>
+        <p>Transformar uma string em um array</p>
+<?php
+$textosLinguagens = "HTML,CSS,JS,PHP,SQL";
+$arrayLinguagens = explode(",",$textosLinguagens);
+?>
+    <pre><?=var_dump($textosLinguagens)?></pre>
+    <pre><?=var_dump($arrayLinguagens)?></pre>
+    <hr>
+
+    <h2>Arrays</h2>
+
+    <h3><code>implode()</code></h3>
+    <p>Transforma array em string</p>
+<?php
+$arrayBandas = ["Rush", "Slayer", "Dio"];
+$textoBandas = implode(" - ", $arrayBandas);
+?>
+
+<pre><?=var_dump($arrayBandas)?></pre>
+<pre><?=var_dump($textoBandas)?></pre>
+
+
     </div>
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

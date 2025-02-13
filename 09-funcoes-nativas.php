@@ -72,14 +72,41 @@ $textoBandas = implode(" - ", $arrayBandas);
      
     extract($aluno);
     ?>
-            <ul>
-                <li>ID: <?=$id?></li>
-                <li>Nome: <?=$nome?></li>
-                <li>Idade: <?=$idade?></li>
-            </ul>
+        <ul>
+            <li>ID: <?=$id?></li>
+            <li>Nome: <?=$nome?></li>
+            <li>Idade: <?=$idade?></li>
+        </ul>
 
+        <hr>
 
+        <h3><code>array_sum()</code></h3>
+        <p>Somar valores de um array numérico</p>
+<?php
+$valores = [10, 20,50, 1000, 500];
+$total = array_sum($valores);
+?>
+        <p>Soma do valores do array: <b><?=$total?></b></p>
+<?php
+$produtos = ["TV", "Notebook", "TV", "Geladeira", "Monitor", "Mouse", "Notbook", "Webcam"];
 
+$produtosUnicos = array_unique($produtos);
+?>
+        <pre><?=var_dump($produtos)?></pre>
+        <pre><?=var_dump($produtosUnicos)?></pre>
+
+        <h2>Numéricas</h2>
+        <h3><code>main(), max(), round()</code></h3>
+<?php
+//Vamos usar o mesmo array de valores criando mais acima...
+$valorQualquer = 1259.75;
+?>
+        <p>Menor valor: <?=min($valores)?></p>
+        <p>Maior valor: <?=max($valores)?></p>
+        <p>Arredomdamento: <?=round($valorQualquer)?></p>
+
+        <h2>Filtros</h2>
+        <p>Recursos/Funções/Constantes de análise e limpeza de dados aplicados através das funções <code>filter_var()</code> e <code>filter_input()</code></p>
     </div>
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

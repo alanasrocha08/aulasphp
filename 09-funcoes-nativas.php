@@ -116,8 +116,18 @@ $emailCorreto = "alanasr02@gmail.com"
 ?>
         <p><?=var_dump(filter_var($emailErrado, FILTER_VALIDATE_EMAIL))?></p>
         <p><?=var_dump(filter_var($emailCorreto, FILTER_VALIDATE_EMAIL))?></p>
+        <hr>
 
         <h3>Sanitização</h3>
+<?php
+$ataqueDeRaqui = "<script>
+    document.body.innerHTML ='<h1 style=background:yellow><marquee loop>Sou ráqui !<>/marquee>/h1>>'<?script>";
+
+//echo $ataqueDeRaqui;
+
+$ataqueSanitizado = filter_var($ataqueDeRaqui, FILTER_SANITIZE_SPECIAL_CHARS);
+echo $ataqueSanitizado;
+?>
     </div>
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

@@ -1,5 +1,12 @@
 <footer>
             <p>Site criado para o curso Téc. Informática para Internet</p>
+<?php
+    $data = date("d/m/y");
+    $hora = date("H:i");?>
+    <p>Data: <?=$data?></p>
+    <p>Hora: <?=$hora?></p>
+
+
         </footer>
     </div>
     

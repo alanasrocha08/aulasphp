@@ -1,12 +1,25 @@
 
-
-    <footer>
 <?php
-    $data = date("d/m/y");
-    $hora = date("H:i");
+    //$data = date("d/m/y");
+    //$hora = date("H:i");
+    
+// Definir o locale como 'pt_BR' (português do Brasil)
+setlocale(LC_TIME, 'pt_BR.UTF-8');
+
+// Criar um objeto DateTime
+$data = new DateTime();
+
+// Usar IntlDateFormatter para formatar a data por extenso
+$fmt = new IntlDateFormatter('pt_BR', IntlDateFormatter::LONG, IntlDateFormatter::NONE);
+$data_extenso = $fmt->format($data);
+
+//echo $data_extenso;
+
+ 
 ?>
-    <p>Data: <?=$data?></p>
-    <p>Hora: <?=$hora?></p>
+    <footer>
+    <p> <?=$data_extenso?></p>
+    <!-- <p>Hora: <?=$hora?></p> -->
     <p>Site criado para o curso Téc. Informática para Internet</p>
     </footer>
     </div>

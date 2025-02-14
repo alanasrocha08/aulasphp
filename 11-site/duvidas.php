@@ -1,4 +1,4 @@
-<?php include "cabecalho.php"; ?>
+<?php include "includes/cabecalho.php"; ?>
             <h2>Página de dúvidas</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, quasi nihil voluptates esse labore quod unde eveniet similique repudiandae corporis, eligendi porro molestias dolore corrupti nobis, saepe laborum. Nam, debitis.</p>
             <h3>Principais dúvidas</h3>
@@ -11,4 +11,4 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellat, cumque accusamus nam vitae consequatur aliquam, reiciendis sed quo ut iste obcaecati nihil explicabo distinctio! Voluptatem veniam libero dolorum architecto?</p>
             </details>
         </main>
-<?php include "rodape.php";?>
+<?php include "includes/rodape.php";?>

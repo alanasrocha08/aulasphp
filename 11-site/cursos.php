@@ -1,4 +1,4 @@
-<?php include "cabecalho.php";?>
+<?php include "includes/cabecalho.php";?>
             <h2>Página de cursos</h2>
             <p>Veja os cursos disponíveis:</p>
              <ul>
@@ -8,5 +8,5 @@
              </ul>
         </main>
 
-<?php include "rodape.php"; ?>
+<?php include "includes/rodape.php"; ?>
         

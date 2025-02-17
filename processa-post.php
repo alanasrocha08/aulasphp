@@ -11,28 +11,21 @@
     <div class="container">
         <h1>Processamento usando POST</h1>
         <hr>
-        <pre><?=var_dump($_POST)?></pre>
-        <form action="processa-post.php" method="post" >
-    <div class="mb-3">
-        <label for="nome" class="form-label">Nome:</label>
-        <input class="form-control" type="text" name="nome" id="nome">
-    </div>
-    <div class="mb-3">
-        <label for="email">E-mail:</label>
-        <input class="form-control" type="email" name="email" id="email">
-    </div>
-    <div class="mb-3">
-        <label for="idade">Idade:</label>
-        <input class="form-control" type="number" name="idade" id="idade" min="1" max="100">
-    </div>
- 
-    <div class="mb-3">
-        <label for="mensagem">Mensagem:</label>
- 
-        <textarea class="form-control" name="mensagem" id="mensagem" cols="30" rows="6"></textarea>
-    </div>
-    <button class="btn btn-primary" type="submit">Enviar dados</button>
-</form>
+<?php
+//Capturando os dados transmitidos
+$nome = $_POST["nome"];
+$email = $_POST["email"];
+$idade = $_POST["idade"];
+$mensagem = $_POST["mensagem"];
+?>
+    <!-- Exibindo -->
+     <h2>Dados:</h2>
+     <ul>
+        <li>Nome: <?=$nome?></li>
+        <li>E-mail: <?=$email?></li>
+        <li>Idade: <?=$idade?>anos</li>
+        <li>Mensagem: <?=$mensagem?></li>
+     </ul>
     </div>
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

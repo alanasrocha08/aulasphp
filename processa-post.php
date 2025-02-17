@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP</title>
+    <title>PHP -  Processamento com POST</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
     <div class="container">
-        <h1>Processamento usando GET</h1>
+        <h1>Processamento usando POST</h1>
         <hr>
-        <pre><?=var_dump($_GET)?></pre>
-        <form action="processa-get.php" method="get" >
+        <pre><?=var_dump($_POST)?></pre>
+        <form action="processa-post.php" method="post" >
     <div class="mb-3">
         <label for="nome" class="form-label">Nome:</label>
         <input class="form-control" type="text" name="nome" id="nome">

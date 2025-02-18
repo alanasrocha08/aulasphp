@@ -24,6 +24,17 @@
             <label for="idade">Idade:</label>
             <input class="form-control" type="number" name="idade" id="idade" min="1" max="100">
         </div>
+        <div class="mb-3">
+            <p>Interesses:</p>
+            <input type="checkbox" name="interesses[]" id="html" value="HTML">
+            <label for="html">HTML</label>
+            
+            <input type="checkbox" name="interesses[]" id="css" value="CSS">
+            <label for="css">CSS</label>
+
+            <input type="checkbox" name="interesses[]" id="js" value="JS">
+            <label for="js">JS</label>
+        </div>
 
         <div class="mb-3">
             <label for="mensagem">Mensagem:</label>

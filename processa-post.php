@@ -11,7 +11,13 @@
     <div class="container">
         <h1>Processamento usando POST</h1>
         <hr>
+
 <?php
+if (empty($_POST["nome"]) || empty($_POST["email"])) {?>
+    <p class="alert alert-danger">Por favor preencha os campos <b>nome</b> e <b>email</b></p>
+<?php
+} else {
+
 //Capturando os dados transmitidos
 $nome = $_POST["nome"];
 $email = $_POST["email"];
@@ -28,7 +34,7 @@ $mensagem = $_POST["mensagem"];
 $interesses = $_POST["interesses"] ?? [];
 
 //Capturando o radio
-$informativos = $_POST["informativos"];
+$informativos = $_POST["informativos"] ?? [];
 ?>
     <!-- Exibindo -->
      <h2>Dados:</h2>
@@ -36,6 +42,9 @@ $informativos = $_POST["informativos"];
         <li>Nome: <?=$nome?></li>
         <li>E-mail: <?=$email?></li>
         <li>Idade: <?=$idade?>anos</li>
+        <?php if (!empty($informativos) ) {?>
+        <li>Receber informativos: <?=$informativos?></li>
+        <?php }?>
 
 <!-- Usamos o empty com inversão de lógica (operador ! de negação). Portanto, se NÃO  ESTÁ vazio, mostre os interesses. -->
 <?php if (!empty($interesses)) {?>
@@ -53,7 +62,9 @@ $informativos = $_POST["informativos"];
 <?php } ?>
         <li>Mensagem: <?=$mensagem?></li>
      </ul>
+<?php }?>
     </div>
+
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

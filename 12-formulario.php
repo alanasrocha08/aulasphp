@@ -14,11 +14,11 @@
         <form action="processa-post.php" method="post">
         <div class="mb-3">
             <label for="nome" class="form-label">Nome:</label>
-            <input class="form-control" type="text" name="nome" id="nome">
+            <input required class="form-control" type="text" name="nome" id="nome">
         </div>
         <div class="mb-3">
-            <label for="email">E-mail:</label>
-            <input class="form-control" type="email" name="email" id="email">
+            <label  for="email">E-mail:</label>
+            <input required class="form-control" type="email" name="email" id="email">
         </div>
         <div class="mb-3">
             <label for="idade">Idade:</label>
@@ -39,7 +39,7 @@
         <div class="mb-3">
             <p>Deseja receber informativos ?</p>
 
-            <input type="radio" name="informativos" id="sim" value="Sim">
+            <input required type="radio" name="informativos" id="sim" value="Sim">
             <label for="sim">Sim</label>
 
             <input type="radio" name="informativos" id="não" value="não">

@@ -17,12 +17,13 @@ if (empty($_POST["nome"]) || empty($_POST["email"])) {?>
     <p class="alert alert-danger">Por favor preencha os campos <b>nome</b> e <b>email</b></p>
 <?php
 } else {
+    //Capturando os dados transmitidos e santizá-los
 
-//Capturando os dados transmitidos
-$nome = $_POST["nome"];
-$email = $_POST["email"];
-$idade = $_POST["idade"];
-$mensagem = $_POST["mensagem"];
+
+$nome = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+$idade = filter_input(INPUT_POST,"idade", FILTER_SANITIZE_NUMBER_INT);
+$mensagem = filter_input(INPUT_POST, "mensagem", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 //Capturando os options
 
@@ -31,10 +32,10 @@ $mensagem = $_POST["mensagem"];
 
 //Solução 2: usando o operador de covalência nula ??
 /* Se houvwe interesses, */
-$interesses = $_POST["interesses"] ?? [];
+$interesses = filter_var_array($_POST["interesses"] ?? [], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 //Capturando o radio
-$informativos = $_POST["informativos"] ?? [];
+$informativos = filter_var_array($_POST["informativos"] ?? [], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 ?>
     <!-- Exibindo -->
      <h2>Dados:</h2>

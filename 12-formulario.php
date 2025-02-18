@@ -18,7 +18,7 @@
         </div>
         <div class="mb-3">
             <label  for="email">E-mail:</label>
-            <input class="form-control" type="email" name="email" id="email">
+            <input required ="form-control" type="email" name="email" id="email">
         </div>
         <div class="mb-3">
             <label for="idade">Idade:</label>

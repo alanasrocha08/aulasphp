@@ -37,6 +37,17 @@
         </div>
 
         <div class="mb-3">
+            <p>Deseja receber informativos ?</p>
+
+            <input type="radio" name="informativos" id="sim" value="Sim">
+            <label for="sim">Sim</label>
+
+            <input type="radio" name="informativos" id="não" value="não">
+            <label for="não">Não</label>
+
+        </div>
+
+        <div class="mb-3">
             <label for="mensagem">Mensagem:</label>
 
             <textarea class="form-control" name="mensagem" id="mensagem" cols="30" rows="6"></textarea>

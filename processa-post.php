@@ -26,6 +26,9 @@ $mensagem = $_POST["mensagem"];
 //Solução 2: usando o operador de covalência nula ??
 /* Se houvwe interesses, */
 $interesses = $_POST["interesses"] ?? [];
+
+//Capturando o radio
+$informativos = $_POST["informativos"];
 ?>
     <!-- Exibindo -->
      <h2>Dados:</h2>

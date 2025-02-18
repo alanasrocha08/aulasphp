@@ -24,6 +24,7 @@ $mensagem = $_POST["mensagem"];
 //$interesses = isset($_POST["interesses"]) ? $_POST["interesses"] : [];
 
 //Solução 2: usando o operador de covalência nula ??
+/* Se houvwe interesses, */
 $interesses = $_POST["interesses"] ?? [];
 ?>
     <!-- Exibindo -->
@@ -32,6 +33,9 @@ $interesses = $_POST["interesses"] ?? [];
         <li>Nome: <?=$nome?></li>
         <li>E-mail: <?=$email?></li>
         <li>Idade: <?=$idade?>anos</li>
+
+<!-- Usamos o empty com inversão de lógica (operador ! de negação). Portanto, se NÃO  ESTÁ vazio, mostre os interesses. -->
+<?php if (!empty($interesses)) {?>
         <li>Interesses - usando <code>implode()</code>: 
             <!-- Transformamos o array em string -->
         <?=implode(" , ",$interesses)?></li>
@@ -43,6 +47,7 @@ $interesses = $_POST["interesses"] ?? [];
                 <?php } ?>
             </ul>
         </li>
+<?php } ?>
         <li>Mensagem: <?=$mensagem?></li>
      </ul>
     </div>
